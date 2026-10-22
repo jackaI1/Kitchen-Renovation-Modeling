@@ -10,7 +10,7 @@ https://github.com/user-attachments/assets/a2729eac-e0e3-4c1c-964b-a7cd38fbd0dc
 
 [Download the full-resolution video](Media/Kitchen_Walkthrough_Previous.mp4)
 
-**Video revision:** this is the last completed selected-B walkthrough. It predates the October 22 pocket-door and pullout refinements. The editable models, drawings and still image below contain those refinements; the replacement render is in progress.
+**Video revision:** this walkthrough is an interim review edition. It predates the October 22 pocket-door and pullout refinements included in the editable models, drawings and still image below.
 
 ## Design and coordination
 
@@ -33,6 +33,7 @@ The current revision coordinates the selected B hood arrangement, the separate b
 | File | Purpose |
 | --- | --- |
 | [Blender model](Blender/Kitchen_Renovation.blend) | Editable scene with packed textures, materials, lighting, cameras and mechanisms. |
+| [Blender scripts and inspection views](Blender/Support.zip) | Portable rendering and fit-check scripts, plus generated mechanism views. See the [Blender instructions](Blender/README.md). |
 | [AutoCAD 3D model](AutoCAD/Drawings/Kitchen_3D.dwg) | Native solids and named assemblies for dimensional coordination. |
 | [AutoCAD drawing file](AutoCAD/Drawings/Kitchen_Documentation.dwg) | Editable documentation, dimensions and nine sheet layouts. |
 | [Generated AutoCAD drawing set](AutoCAD/Kitchen_Coordination_Set.pdf) | Plans, elevations, island details, pullouts, pocket door and stone junctions. |
