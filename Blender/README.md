@@ -2,7 +2,7 @@
 
 `Kitchen_Renovation.blend` is the current selected-B coordination model. It opens at the first frame of the walkthrough and contains organized, editable collections and seven packed image assets.
 
-The repository's embedded walkthrough is a preceding review edition, retained as an interim preview. The current model includes the subsequent pocket-door, backsplash and pullout corrections summarized in the main project README.
+The repository's embedded walkthrough was rendered from this model and includes the pocket-door, backsplash and pullout corrections summarized in the main project README.
 
 ## Reproduce the walkthrough
 

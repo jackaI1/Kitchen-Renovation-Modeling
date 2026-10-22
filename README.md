@@ -6,11 +6,9 @@ A coordinated Blender and AutoCAD study developed for **onsite reference and des
 
 The walkthrough follows the kitchen at eye level, demonstrates selected appliance and drawer clearances, and closes with a comparison of the lighting systems.
 
-https://github.com/user-attachments/assets/a2729eac-e0e3-4c1c-964b-a7cd38fbd0dc
+https://github.com/user-attachments/assets/2e3ea079-7554-4750-bff1-a47eb61ab4c0
 
-[Download the full-resolution video](Media/Kitchen_Walkthrough_Previous.mp4)
-
-**Video revision:** this walkthrough is an interim review edition. It predates the October 22 pocket-door and pullout refinements included in the editable models, drawings and still image below.
+[Download the full-resolution video](Media/Kitchen_Walkthrough.mp4)
 
 ## Design and coordination
 
