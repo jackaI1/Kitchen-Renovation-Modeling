@@ -1,0 +1,10 @@
+.DS_Store
+*.blend1
+*.blend2
+*.dwl
+*.dwl2
+*.bak
+*.sv$
+__pycache__/
+frames/
+*.copying

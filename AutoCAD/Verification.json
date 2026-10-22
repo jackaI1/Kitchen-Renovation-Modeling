@@ -1,0 +1,486 @@
+{
+  "units": "inches",
+  "selection": "B selected, owner coordination 22 October 2026",
+  "native_solids": 947,
+  "native_dimensions": 99,
+  "native_integrity_audit": {
+    "model_errors": 0,
+    "documentation_errors": 0
+  },
+  "method": "Native entity properties, full database records and MASSPROP of disposable copy. Unaffected native entities compared with retained prior B model.",
+  "checks": [
+    {
+      "check": "All native entities outside authorized revision groups unchanged from previous B",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "check": "Selected B lowest underside above36 counter",
+      "actual": 30.0,
+      "expected": 30,
+      "pass": true
+    },
+    {
+      "check": "Selected B stone bottom",
+      "actual": 68.24535,
+      "expected": 68.24535,
+      "pass": true
+    },
+    {
+      "check": "Selected B stone height",
+      "actual": 39.75465,
+      "expected": 39.75465,
+      "pass": true
+    },
+    {
+      "check": "B03 single native boolean solid",
+      "actual": 1,
+      "expected": 1,
+      "pass": true
+    },
+    {
+      "check": "B03 positive boolean volume",
+      "actual": 545.3628,
+      "expected": 545.3628,
+      "pass": true
+    },
+    {
+      "check": "B03 lower edge",
+      "actual": 31.0,
+      "expected": 31,
+      "pass": true
+    },
+    {
+      "check": "B03 top to selected hood stone",
+      "actual": 68.2454,
+      "expected": 68.24535,
+      "pass": true
+    },
+    {
+      "check": "PULLOUT-SPICE-LEFT fullheight front lower",
+      "actual": 4.0625,
+      "expected": 4.0625,
+      "pass": true
+    },
+    {
+      "check": "PULLOUT-SPICE-LEFT front upper",
+      "actual": 34.4375,
+      "expected": 34.4375,
+      "pass": true
+    },
+    {
+      "check": "PULLOUT-SPICE-LEFT front bay width incl reveals",
+      "actual": 10.0,
+      "expected": 10,
+      "pass": true
+    },
+    {
+      "check": "PULLOUT-SPICE-LEFT horizontal pull center height",
+      "actual": 33.100004999999996,
+      "expected": 33.1,
+      "pass": true
+    },
+    {
+      "check": "PULLOUT-SPICE-LEFT no fixed shelves or swing hinges",
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    },
+    {
+      "check": "PULLOUT-UTENSIL-RIGHT fullheight front lower",
+      "actual": 4.0625,
+      "expected": 4.0625,
+      "pass": true
+    },
+    {
+      "check": "PULLOUT-UTENSIL-RIGHT front upper",
+      "actual": 34.4375,
+      "expected": 34.4375,
+      "pass": true
+    },
+    {
+      "check": "PULLOUT-UTENSIL-RIGHT front bay width incl reveals",
+      "actual": 10.0,
+      "expected": 10,
+      "pass": true
+    },
+    {
+      "check": "PULLOUT-UTENSIL-RIGHT horizontal pull center height",
+      "actual": 33.100004999999996,
+      "expected": 33.1,
+      "pass": true
+    },
+    {
+      "check": "PULLOUT-UTENSIL-RIGHT no fixed shelves or swing hinges",
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    },
+    {
+      "check": "PULLOUT-WASTE fullheight front lower",
+      "actual": 4.0625,
+      "expected": 4.0625,
+      "pass": true
+    },
+    {
+      "check": "PULLOUT-WASTE front upper",
+      "actual": 34.4375,
+      "expected": 34.4375,
+      "pass": true
+    },
+    {
+      "check": "PULLOUT-WASTE front bay width incl reveals",
+      "actual": 15.0,
+      "expected": 15,
+      "pass": true
+    },
+    {
+      "check": "PULLOUT-WASTE horizontal pull center height",
+      "actual": 33.100004999999996,
+      "expected": 33.1,
+      "pass": true
+    },
+    {
+      "check": "PULLOUT-WASTE no fixed shelves or swing hinges",
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    },
+    {
+      "check": "Spice front left of range",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "check": "Utensil front right of range",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "check": "Spice carrier base usable level",
+      "actual": 6.79,
+      "expected": 6.79,
+      "pass": true
+    },
+    {
+      "check": "Spice upper tier levels",
+      "actual": [
+        15.1,
+        23.1
+      ],
+      "expected": [
+        15.1,
+        23.1
+      ],
+      "pass": true
+    },
+    {
+      "check": "PULLOUT-SPICE-LEFT four supported uprights",
+      "actual": 4,
+      "expected": 4,
+      "pass": true
+    },
+    {
+      "check": "PULLOUT-UTENSIL-RIGHT four supported uprights",
+      "actual": 4,
+      "expected": 4,
+      "pass": true
+    },
+    {
+      "check": "Garbage bin depth",
+      "actual": 7.5,
+      "expected": 7.5,
+      "pass": true
+    },
+    {
+      "check": "Garbage bin width",
+      "actual": 10.900000000000006,
+      "expected": 10.9,
+      "pass": true
+    },
+    {
+      "check": "Garbage bin height",
+      "actual": 18.5,
+      "expected": 18.5,
+      "pass": true
+    },
+    {
+      "check": "Garbage bin outer Xstart",
+      "actual": 142.5,
+      "expected": 142.5,
+      "pass": true
+    },
+    {
+      "check": "Garbage bin outer Xend",
+      "actual": 150.0,
+      "expected": 150,
+      "pass": true
+    },
+    {
+      "check": "Recycling bin depth",
+      "actual": 7.5,
+      "expected": 7.5,
+      "pass": true
+    },
+    {
+      "check": "Recycling bin width",
+      "actual": 10.900000000000006,
+      "expected": 10.9,
+      "pass": true
+    },
+    {
+      "check": "Recycling bin height",
+      "actual": 18.5,
+      "expected": 18.5,
+      "pass": true
+    },
+    {
+      "check": "Recycling bin outer Xstart",
+      "actual": 150.5,
+      "expected": 150.5,
+      "pass": true
+    },
+    {
+      "check": "Recycling bin outer Xend",
+      "actual": 158.0,
+      "expected": 158,
+      "pass": true
+    },
+    {
+      "check": "Tandem bin divider Xstart",
+      "actual": 150.13,
+      "expected": 150.13,
+      "pass": true
+    },
+    {
+      "check": "Tandem bin divider Xend",
+      "actual": 150.37,
+      "expected": 150.37,
+      "pass": true
+    },
+    {
+      "check": "Utensil shaped native Boolean solids",
+      "actual": 4,
+      "expected": 4,
+      "pass": true
+    },
+    {
+      "check": "Pocket inside-left pull plan depth",
+      "actual": 189.0,
+      "expected": 189,
+      "pass": true
+    },
+    {
+      "check": "Pocket opening low plan depth",
+      "actual": 156.25,
+      "expected": 156.25,
+      "pass": true
+    },
+    {
+      "check": "Pocket opening high plan depth",
+      "actual": 192.25,
+      "expected": 192.25,
+      "pass": true
+    },
+    {
+      "check": "Pocket cavity two wall skins",
+      "actual": 2,
+      "expected": 2,
+      "pass": true
+    },
+    {
+      "check": "Pocket cavity start",
+      "actual": 120.25,
+      "expected": 120.25,
+      "pass": true
+    },
+    {
+      "check": "Pocket cavity end",
+      "actual": 156.25,
+      "expected": 156.25,
+      "pass": true
+    },
+    {
+      "check": "Cabinet-to-pocket gap",
+      "actual": 7.25,
+      "expected": 7.25,
+      "pass": true
+    },
+    {
+      "check": "Named native assembly count",
+      "actual": 89,
+      "expected": 89,
+      "pass": true
+    },
+    {
+      "check": "Positive unit INSERT scales",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "check": "All native dimensions without value overrides",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "check": "Locked coordinated layouts",
+      "actual": 9,
+      "expected": 9,
+      "pass": true
+    },
+    {
+      "check": "A101 locked",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "check": "A101 scale denominator",
+      "actual": 16.0,
+      "expected": 16,
+      "pass": true
+    },
+    {
+      "check": "A201 locked",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "check": "A201 scale denominator",
+      "actual": 12.0,
+      "expected": 12,
+      "pass": true
+    },
+    {
+      "check": "A202 locked",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "check": "A202 scale denominator",
+      "actual": 12.0,
+      "expected": 12,
+      "pass": true
+    },
+    {
+      "check": "A203 locked",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "check": "A203 scale denominator",
+      "actual": 12.0,
+      "expected": 12,
+      "pass": true
+    },
+    {
+      "check": "A401 locked",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "check": "A401 scale denominator",
+      "actual": 12.0,
+      "expected": 12,
+      "pass": true
+    },
+    {
+      "check": "A402 locked",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "check": "A402 scale denominator",
+      "actual": 12.0,
+      "expected": 12,
+      "pass": true
+    },
+    {
+      "check": "A501 locked",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "check": "A501 scale denominator",
+      "actual": 2.0,
+      "expected": 2,
+      "pass": true
+    },
+    {
+      "check": "A502 locked",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "check": "A502 scale denominator",
+      "actual": 8.0,
+      "expected": 8,
+      "pass": true
+    },
+    {
+      "check": "A602 locked",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "check": "A602 scale denominator",
+      "actual": 12.0,
+      "expected": 12,
+      "pass": true
+    },
+    {
+      "check": "Actual native database excluded-address scan",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    }
+  ],
+  "limits": [
+    "Accessory fittings are coordinated provisional studies, not selected supplier products.",
+    "Targeted native checks are not exhaustive construction or operating-clearance certification."
+  ],
+  "accessory_boolean_mass_checks": [
+    {
+      "solid": "accessory_boolean_1",
+      "native_volume_cubic_inches": 124.6272,
+      "pass": true
+    },
+    {
+      "solid": "accessory_boolean_2",
+      "native_volume_cubic_inches": 3.4607,
+      "pass": true
+    },
+    {
+      "solid": "accessory_boolean_3",
+      "native_volume_cubic_inches": 3.4607,
+      "pass": true
+    },
+    {
+      "solid": "accessory_boolean_4",
+      "native_volume_cubic_inches": 23.9326,
+      "pass": true
+    }
+  ],
+  "pdf_verification": {
+    "pages": 9,
+    "page_inches": [
+      24,
+      18
+    ],
+    "native_to_normalized_and_combined_pixel_identity": true,
+    "comparison_dpi": 50
+  }
+}

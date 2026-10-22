@@ -1,0 +1,104 @@
+{
+  "files": [
+    {
+      "path": "Drawings/Kitchen_3D.dwg",
+      "bytes": 1230909,
+      "sha256": "700e87f44395f4cb8b7fdc0ac4c46a421034f5f81ac1b04d4b90215f3af09518"
+    },
+    {
+      "path": "Drawings/Kitchen_Documentation.dwg",
+      "bytes": 154292,
+      "sha256": "c3a1c1a5478d359cd6b13fdd2b9f142a8ff07e5dd3a38767262b6e0317cabec3"
+    },
+    {
+      "path": "Kitchen_Coordination_Set.pdf",
+      "bytes": 371801,
+      "sha256": "cc93218c72a624c66981ea52c0924b372666afce72567a61536d6eb6284aa1c2"
+    },
+    {
+      "path": "Previews/Kitchen_Interior.png",
+      "bytes": 216971,
+      "sha256": "802b31e9560ed3a02607420e10831fa4b57f0c4fca17f4b4f0ffaefd171a56d1"
+    },
+    {
+      "path": "Previews/Spice_Pullout_Cutaway.png",
+      "bytes": 119375,
+      "sha256": "aff4d8ef5d124fd78ff21aa254410409caff1e9db1234264c774d0e7cf5132ae"
+    },
+    {
+      "path": "Previews/Utensil_Pullout_Cutaway.png",
+      "bytes": 144958,
+      "sha256": "f17f3b49f2db540b4cd2e9b58dba74674ac50d8a15d0ecf4d54643532e416b42"
+    },
+    {
+      "path": "Previews/Waste_Pullout_Cutaway.png",
+      "bytes": 95638,
+      "sha256": "bbee9d4bd1206389220fcea6fa8e2a9bd892acabae5a4b303165acccc709c636"
+    },
+    {
+      "path": "README.txt",
+      "bytes": 3259,
+      "sha256": "c47abf3308d2837680d9363946f1af6528712031256c58d966994dad9fe57d1f"
+    },
+    {
+      "path": "Rebuild/Rebuild_Documentation.lsp",
+      "bytes": 345702,
+      "sha256": "46ff46d9d8589d8274130c82cff2c400de7e2d969650da50aecb4864cbe2b45e"
+    },
+    {
+      "path": "Rebuild/Rebuild_Model.lsp",
+      "bytes": 170630,
+      "sha256": "8275ef223a21909b57a260498d58ebc5d810c2eee9a8131509877a0b956dca45"
+    },
+    {
+      "path": "Sheets/A101.pdf",
+      "bytes": 44691,
+      "sha256": "f6436ccc66565171ea590f5a297350c5e22a1be163a392e0e255d8b1e62c6466"
+    },
+    {
+      "path": "Sheets/A201.pdf",
+      "bytes": 40612,
+      "sha256": "b45bd6491be752d80e041ab56351b5b184a4efea1b599116c4425d9599af186c"
+    },
+    {
+      "path": "Sheets/A202.pdf",
+      "bytes": 41512,
+      "sha256": "eaa9f00be6f1136c534421b63b6b60771bfe010ead4fef551f89e4344ee64667"
+    },
+    {
+      "path": "Sheets/A203.pdf",
+      "bytes": 40513,
+      "sha256": "45d7d02e377cc8a716c08e8edcef654634789f971c0f94fd6c8f5a1e402c0e6b"
+    },
+    {
+      "path": "Sheets/A401.pdf",
+      "bytes": 43758,
+      "sha256": "8ea25c91025e80c3c0e8af3e44d6cb1d1bdca0d3e72c1a50e9d5c9a6fcddaa75"
+    },
+    {
+      "path": "Sheets/A402.pdf",
+      "bytes": 43135,
+      "sha256": "3ccabbf226e17d4f7ccc1fbd39790b2335b36d533b0588f346fdaa79642eebbf"
+    },
+    {
+      "path": "Sheets/A501.pdf",
+      "bytes": 40424,
+      "sha256": "89b524c975fd543a2f704d14a472efcc3cb8d1606f28e25c3e4c9880da2b806f"
+    },
+    {
+      "path": "Sheets/A502.pdf",
+      "bytes": 39610,
+      "sha256": "8edd2270ba7b81d0e0af24ef2f1d41ad227fd6f81c0948064ebbca1aaad8c765"
+    },
+    {
+      "path": "Sheets/A602.pdf",
+      "bytes": 39908,
+      "sha256": "b0ab074c752c149b5b88dd22e58c63e26f57db678d9babe7414fd19dc0b00d73"
+    },
+    {
+      "path": "Verification.json",
+      "bytes": 10451,
+      "sha256": "5d8fec039059656ca182bb48d7d5018c3dd9530f8537d95307af6b18c427e8ce"
+    }
+  ]
+}
