@@ -71,14 +71,24 @@ replaced by appliance assumptions.
 For each circuit, assigned demand is `load_va × demand_factor`. Demand factors
 are user scenarios, not a jurisdictional demand schedule. Operating current is
 `demand_va / voltage_v` for one phase, or `demand_va / (√3 × voltage_v)` for
-three phases. `design_current_a` multiplies continuous demand by 1.25 before
-sizing. Voltage drop always uses operating demand, without that sizing multiplier.
+three phases. `design_current_a` for a branch uses connected load, multiplied by 1.25 when
+continuous. Assigned diversity cannot hide an overloaded branch or reduce its
+selected conductor. Feeder design aggregation still uses assigned demand with
+the continuous multiplier. Voltage drop uses operating demand, without that sizing multiplier.
+
+For example, the sample upper receptacles have 3600 VA connected at 120 V:
+30 A branch design current versus 15 A operating demand. The assigned 20 A
+breaker receives `device_overload`, and automatic selection chooses #10 copper.
+A zero demand factor still leaves branch protection diagnostics active. There
+is no branch-specific code diversity rule, interlock or enforceable load cap
+modeled. This conservative basis follows the general noncontinuous plus 125%
+continuous reference in [Schneider conductor guidance](https://productinfo.se.com/na-std-ref/5c0fee4b347bdf0001de4d55/Conductor%20Ampacity%20Tables/English/Data%20Bulletin%20-%20Conductor%20Ampacity%20Tables%20%28bookmap%29_0000264293.ditamap/%24/NEC210.19ConductorsMinimumAmpacityA-F20BBAC1).
 
 Downstream loads are counted exactly once in every ancestor. The report retains
 scalar sums `connected_va` and `demand_va`, while panel operating current uses
 the magnitude of summed complex powers: `P = VA × pf`,
-`Q = VA × √(1 − pf²)`, `I = |Σ(P+jQ)| / (√3 Vll)`. Design current uses the same
-sum with each continuous load increased by 25%. Connected current is a
+`Q = VA × √(1 − pf²)`, `I = |Σ(P+jQ)| / (√3 Vll)`. Feeder design current uses the same
+sum with each continuous demand increased by 25%. Connected current is a
 conservative nameplate-VA equivalent, `ΣVA/(√3 Vll)` at panels and
 `load_va/(phase_factor × voltage_v)` at branches.
 

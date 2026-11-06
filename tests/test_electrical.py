@@ -50,7 +50,7 @@ def test_connected_demand_and_continuous_load_reach_both_panels():
     assert out["panels"]["MAIN"]["demand_va"] == 4800
     assert out["panels"]["MAIN"]["design_current_a"] == pytest.approx(14.156184485)
     assert out["panels"]["SUB"]["demand_va"] == 1200
-    assert out["circuits"]["lights"]["design_current_a"] == pytest.approx(12.490751016)
+    assert out["circuits"]["lights"]["design_current_a"] == pytest.approx(24.981502032)
     assert out["circuits"]["lights"]["connected_current_a"] == pytest.approx(19.9852016258)
 
 
@@ -212,3 +212,21 @@ def test_sample_run_writes_json_csv_html_and_reopenable_dxf(tmp_path):
     labels = [entity.dxf.text for entity in dxf.modelspace().query("TEXT")]
     for circuit in data["circuits"]:
         assert any(circuit["id"] in label for label in labels)
+
+
+@pytest.mark.parametrize('factor', [0, .1, .5])
+def test_branch_diversity_cannot_hide_connected_overload(factor):
+    data = system()
+    data['circuits'][1].update(load_va=3600, voltage_v=120, demand_factor=factor,
+                               continuous=True, breaker_a=20)
+    result = module().calculate(data)
+    branch = result['circuits']['lights']
+    assert branch['design_current_a'] == pytest.approx(37.5)
+    assert branch['demand_current_a'] == pytest.approx(30*factor)
+    assert branch['conductor']['awg'] == '8'
+    assert 'device_overload' in branch['warnings']
+    # Feeder diversity remains explicit, even when branch protection fails.
+    assert result['panels']['SUB']['design_current_a'] == pytest.approx(4500*factor/(math.sqrt(3)*208))
+    data['circuits'][1]['conductor_awg'] = '12'
+    branch = module().calculate(data)['circuits']['lights']
+    assert {'conductor_undersized', 'device_overload'} <= set(branch['warnings'])

@@ -30,7 +30,7 @@ REFERENCES = [
 ASSUMPTIONS = [
     "Preliminary educational study; no permit, code compliance or construction signoff.",
     "Synthetic balanced 60 Hz three-phase radial supply; single-phase loads perfectly distributed across phases.",
-    "Explicit user demand factors; continuous demand multiplied by 1.25 only for sizing.",
+    "Branch sizing uses connected load with 1.25 continuous multiplier; assigned demand is retained for feeder sizing and operating drop.",
     "Copper 75 C ampacity at 30 C ambient, at most three current-carrying conductors; user derating multiplier only.",
     "Small conductor device caps 15/20/30 A for AWG 14/12/10; no next-size-up exception.",
     "Drop uses 90 C copper resistance, faults use 20 C resistance; reactance 0.096 milliohm/m at 60 Hz.",
@@ -220,9 +220,10 @@ def calculate(data):
         if not any(math.isclose(v, allowed, rel_tol=0.002) for allowed in supported):
             raise ValueError("circuit voltage incompatible with common supply voltage")
         demand = load * factor
-        sizing = demand * (1.25 if continuous else 1)
+        feeder_sizing = demand * (1.25 if continuous else 1)
+        branch_sizing = load * (1.25 if continuous else 1)
         current_divisor = v * (math.sqrt(3) if phases == 3 else 1)
-        result = cable(c, sizing / current_divisor, demand / current_divisor, v, phases, pf)
+        result = cable(c, branch_sizing / current_divisor, demand / current_divisor, v, phases, pf)
         result.update(panel=panel, connected_va=load, demand_va=demand, phases=phases,
                       connected_current_a=load / current_divisor,
                       voltage_v=v, power_factor=pf, continuous=continuous, demand_factor=factor)
@@ -231,7 +232,7 @@ def calculate(data):
         totals[panel][0] += load
         totals[panel][1] += demand
         totals[panel][2] += demand * s
-        totals[panel][3] += sizing * s
+        totals[panel][3] += feeder_sizing * s
     for name in reversed(order):
         parent = panels[name].get("parent")
         if parent is not None:
