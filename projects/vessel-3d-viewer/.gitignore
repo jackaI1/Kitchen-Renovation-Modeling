@@ -1,0 +1,9 @@
+node_modules/
+dist/
+test-results/
+playwright-report/
+__pycache__/
+*.blend1
+.DS_Store
+.superpowers/
+.impeccable/

@@ -1,0 +1,6 @@
+id,name,duration_days,dependencies,budget,actual_cost,progress
+A,Design,5,,12000,11000,1
+B,Permits,4,A,4000,2500,0.75
+C,Order equipment,8,A,30000,18000,0.5
+D,Installation,6,B;C,20000,0,0
+E,Commissioning,3,D,8000,0,0
