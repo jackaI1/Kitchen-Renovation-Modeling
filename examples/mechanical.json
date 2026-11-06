@@ -1,0 +1,190 @@
+{
+  "study_name": "Synthetic kitchen and upper room mechanical comparison",
+  "units": {
+    "length": "m",
+    "area": "m2",
+    "volume": "m3",
+    "temperature": "degC",
+    "temperature_difference": "K",
+    "airflow": "m3/s",
+    "power": "W",
+    "u_value": "W/(m2*K)",
+    "pressure": "Pa",
+    "water_flow": "L/s",
+    "humidity_ratio": "kg/kg",
+    "irradiance": "W/m2"
+  },
+  "design": {
+    "heating_indoor_c": 21,
+    "heating_outdoor_c": -18,
+    "cooling_indoor_c": 24,
+    "cooling_outdoor_c": 31,
+    "cooling_indoor_humidity_ratio_kg_kg": 0.009,
+    "cooling_outdoor_humidity_ratio_kg_kg": 0.014,
+    "heating_supply_delta_k": 20,
+    "cooling_supply_delta_k": 10
+  },
+  "rooms": [
+    {
+      "name": "Kitchen",
+      "volume_m3": 75,
+      "infiltration_ach": 0.35,
+      "ventilation_m3_s": 0.012,
+      "surfaces": [
+        {
+          "name": "Exterior opaque wall net of glazing",
+          "area_m2": 20,
+          "u_w_m2k": 0.28
+        },
+        {
+          "name": "Glazing",
+          "area_m2": 4,
+          "u_w_m2k": 1.6
+        }
+      ],
+      "internal_sensible_w": 450,
+      "internal_latent_w": 120,
+      "solar": [
+        {
+          "name": "Glazing",
+          "area_m2": 4,
+          "irradiance_w_m2": 450,
+          "shgc": 0.45,
+          "shading_factor": 0.7
+        }
+      ],
+      "occupancy": {
+        "count": 2,
+        "sensible_w_person": 75,
+        "latent_w_person": 55
+      }
+    },
+    {
+      "name": "Upper room",
+      "volume_m3": 60,
+      "infiltration_ach": 0.35,
+      "ventilation_m3_s": 0.008,
+      "surfaces": [
+        {
+          "name": "Exterior opaque wall net of glazing",
+          "area_m2": 18,
+          "u_w_m2k": 0.28
+        },
+        {
+          "name": "Roof",
+          "area_m2": 24,
+          "u_w_m2k": 0.18
+        },
+        {
+          "name": "Glazing",
+          "area_m2": 3,
+          "u_w_m2k": 1.6
+        }
+      ],
+      "internal_sensible_w": 180,
+      "internal_latent_w": 70,
+      "solar": [
+        {
+          "name": "Glazing",
+          "area_m2": 3,
+          "irradiance_w_m2": 350,
+          "shgc": 0.45,
+          "shading_factor": 0.8
+        }
+      ],
+      "occupancy": {
+        "count": 1,
+        "sensible_w_person": 75,
+        "latent_w_person": 55
+      }
+    }
+  ],
+  "duct_settings": {
+    "available_diameters_m": [
+      0.1,
+      0.125,
+      0.15,
+      0.175,
+      0.2,
+      0.25
+    ],
+    "target_friction_pa_m": 0.8,
+    "max_velocity_m_s": 4,
+    "roughness_m": 9e-05
+  },
+  "ducts": [
+    {
+      "name": "Kitchen supply",
+      "airflow_m3_s": 0.13,
+      "length_m": 12,
+      "fittings": [
+        {
+          "name": "Assigned bend assumption",
+          "k": 0.5,
+          "count": 2
+        },
+        {
+          "name": "Assigned terminal assumption",
+          "k": 1,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "Upper supply",
+      "airflow_m3_s": 0.08,
+      "length_m": 18,
+      "selected_diameter_m": 0.125,
+      "fittings": [
+        {
+          "name": "Assigned bend assumption",
+          "k": 0.5,
+          "count": 3
+        },
+        {
+          "name": "Assigned terminal assumption",
+          "k": 1,
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "plumbing_settings": {
+    "available_inside_diameters_m": [
+      0.013,
+      0.019,
+      0.025,
+      0.032
+    ],
+    "max_velocity_m_s": 2
+  },
+  "plumbing": [
+    {
+      "name": "Kitchen combined supply",
+      "system": "flush_tank",
+      "load_scope": "combined",
+      "fixtures": [
+        {
+          "type": "kitchen_sink_private",
+          "count": 1
+        },
+        {
+          "type": "dishwasher_private",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "Bathroom combined supply",
+      "system": "flush_tank",
+      "load_scope": "combined",
+      "selected_inside_diameter_m": 0.013,
+      "fixtures": [
+        {
+          "type": "bathroom_group_private_flush_tank",
+          "count": 1
+        }
+      ]
+    }
+  ]
+}

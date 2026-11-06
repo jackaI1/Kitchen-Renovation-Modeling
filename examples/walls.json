@@ -1,0 +1,193 @@
+{
+  "units": {
+    "length": "m",
+    "conductivity": "W/(m*K)",
+    "permeance": "ng/(Pa*s*m^2)",
+    "temperature": "degC",
+    "rh": "fraction"
+  },
+  "climate": {
+    "indoor_c": 21,
+    "outdoor_c": -18,
+    "indoor_rh": 0.35,
+    "outdoor_rh": 0.8
+  },
+  "assemblies": [
+    {
+      "name": "Ontario wood frame cavity insulation study",
+      "layers": [
+        {
+          "name": "gypsum",
+          "thickness_m": 0.0127,
+          "conductivity_w_mk": 0.16,
+          "permeance_ng_pa_s_m2": 2800,
+          "controls": [],
+          "continuous": true
+        },
+        {
+          "name": "sealed polyethylene",
+          "thickness_m": 0.00015,
+          "conductivity_w_mk": 0.33,
+          "permeance_ng_pa_s_m2": 3.4,
+          "controls": [
+            "air",
+            "vapour"
+          ],
+          "continuous": true
+        },
+        {
+          "name": "cavity mineral wool",
+          "thickness_m": 0.14,
+          "conductivity_w_mk": 0.04,
+          "permeance_ng_pa_s_m2": 4000,
+          "controls": [
+            "thermal"
+          ],
+          "continuous": true
+        },
+        {
+          "name": "wood sheathing",
+          "thickness_m": 0.011,
+          "conductivity_w_mk": 0.13,
+          "permeance_ng_pa_s_m2": 100,
+          "controls": [],
+          "continuous": true
+        },
+        {
+          "name": "drained water membrane",
+          "thickness_m": 0.0005,
+          "conductivity_w_mk": 0.2,
+          "permeance_ng_pa_s_m2": 3000,
+          "controls": [
+            "water"
+          ],
+          "continuous": true
+        }
+      ]
+    },
+    {
+      "name": "Ontario wood frame with exterior insulation study",
+      "layers": [
+        {
+          "name": "gypsum",
+          "thickness_m": 0.0127,
+          "conductivity_w_mk": 0.16,
+          "permeance_ng_pa_s_m2": 2800,
+          "controls": [],
+          "continuous": true
+        },
+        {
+          "name": "sealed polyethylene",
+          "thickness_m": 0.00015,
+          "conductivity_w_mk": 0.33,
+          "permeance_ng_pa_s_m2": 3.4,
+          "controls": [
+            "air",
+            "vapour"
+          ],
+          "continuous": true
+        },
+        {
+          "name": "cavity mineral wool",
+          "thickness_m": 0.14,
+          "conductivity_w_mk": 0.04,
+          "permeance_ng_pa_s_m2": 4000,
+          "controls": [
+            "thermal"
+          ],
+          "continuous": true
+        },
+        {
+          "name": "wood sheathing",
+          "thickness_m": 0.011,
+          "conductivity_w_mk": 0.13,
+          "permeance_ng_pa_s_m2": 100,
+          "controls": [],
+          "continuous": true
+        },
+        {
+          "name": "drained water membrane",
+          "thickness_m": 0.0005,
+          "conductivity_w_mk": 0.2,
+          "permeance_ng_pa_s_m2": 3000,
+          "controls": [
+            "water"
+          ],
+          "continuous": true
+        },
+        {
+          "name": "continuous exterior mineral wool",
+          "thickness_m": 0.08,
+          "conductivity_w_mk": 0.04,
+          "permeance_ng_pa_s_m2": 5000,
+          "controls": [
+            "thermal"
+          ],
+          "continuous": true
+        }
+      ]
+    },
+    {
+      "name": "Ontario insulated masonry study",
+      "layers": [
+        {
+          "name": "gypsum",
+          "thickness_m": 0.0127,
+          "conductivity_w_mk": 0.16,
+          "permeance_ng_pa_s_m2": 2800,
+          "controls": [],
+          "continuous": true
+        },
+        {
+          "name": "sealed polyethylene",
+          "thickness_m": 0.00015,
+          "conductivity_w_mk": 0.33,
+          "permeance_ng_pa_s_m2": 3.4,
+          "controls": [
+            "air",
+            "vapour"
+          ],
+          "continuous": true
+        },
+        {
+          "name": "interior mineral wool",
+          "thickness_m": 0.09,
+          "conductivity_w_mk": 0.04,
+          "permeance_ng_pa_s_m2": 4000,
+          "controls": [
+            "thermal"
+          ],
+          "continuous": true
+        },
+        {
+          "name": "concrete masonry",
+          "thickness_m": 0.19,
+          "conductivity_w_mk": 0.8,
+          "permeance_ng_pa_s_m2": 60,
+          "controls": [],
+          "continuous": true
+        },
+        {
+          "name": "drained water membrane",
+          "thickness_m": 0.0005,
+          "conductivity_w_mk": 0.2,
+          "permeance_ng_pa_s_m2": 3000,
+          "controls": [
+            "water"
+          ],
+          "continuous": true
+        },
+        {
+          "name": "continuous exterior mineral wool",
+          "thickness_m": 0.08,
+          "conductivity_w_mk": 0.04,
+          "permeance_ng_pa_s_m2": 5000,
+          "controls": [
+            "thermal"
+          ],
+          "continuous": true
+        }
+      ]
+    }
+  ]
+}

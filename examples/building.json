@@ -1,0 +1,668 @@
+{
+  "name": "Synthetic two-storey coordination and site logistics",
+  "storeys": [
+    {
+      "id": "L1",
+      "elevation_m": 0
+    },
+    {
+      "id": "L2",
+      "elevation_m": 3
+    }
+  ],
+  "elements": [
+    {
+      "id": "L1-south",
+      "type": "wall",
+      "origin_m": [
+        0,
+        0,
+        0
+      ],
+      "size_m": [
+        8,
+        0.2,
+        3
+      ],
+      "discipline": "architecture",
+      "storey": "L1"
+    },
+    {
+      "id": "L1-north",
+      "type": "wall",
+      "origin_m": [
+        0,
+        5.8,
+        0
+      ],
+      "size_m": [
+        8,
+        0.2,
+        3
+      ],
+      "discipline": "architecture",
+      "storey": "L1"
+    },
+    {
+      "id": "L1-west",
+      "type": "wall",
+      "origin_m": [
+        0,
+        0.2,
+        0
+      ],
+      "size_m": [
+        0.2,
+        5.6,
+        3
+      ],
+      "discipline": "architecture",
+      "storey": "L1"
+    },
+    {
+      "id": "L1-east",
+      "type": "wall",
+      "origin_m": [
+        7.8,
+        0.2,
+        0
+      ],
+      "size_m": [
+        0.2,
+        5.6,
+        3
+      ],
+      "discipline": "architecture",
+      "storey": "L1"
+    },
+    {
+      "id": "L1-partition",
+      "type": "wall",
+      "origin_m": [
+        4,
+        0.2,
+        0
+      ],
+      "size_m": [
+        0.2,
+        5.6,
+        3
+      ],
+      "discipline": "architecture",
+      "storey": "L1"
+    },
+    {
+      "id": "L1-slab",
+      "type": "slab",
+      "origin_m": [
+        0,
+        0,
+        -0.2
+      ],
+      "size_m": [
+        8,
+        6,
+        0.2
+      ],
+      "discipline": "architecture",
+      "storey": "L1"
+    },
+    {
+      "id": "L1-west-room",
+      "type": "space",
+      "origin_m": [
+        0.2,
+        0.2,
+        0
+      ],
+      "size_m": [
+        3.8,
+        5.6,
+        2.8
+      ],
+      "discipline": "architecture",
+      "storey": "L1"
+    },
+    {
+      "id": "L1-east-room",
+      "type": "space",
+      "origin_m": [
+        4.2,
+        0.2,
+        0
+      ],
+      "size_m": [
+        3.6,
+        5.6,
+        2.8
+      ],
+      "discipline": "architecture",
+      "storey": "L1"
+    },
+    {
+      "id": "L1-column",
+      "type": "column",
+      "origin_m": [
+        5,
+        3,
+        0
+      ],
+      "size_m": [
+        0.3,
+        0.3,
+        3
+      ],
+      "discipline": "structure",
+      "storey": "L1"
+    },
+    {
+      "id": "L2-south",
+      "type": "wall",
+      "origin_m": [
+        0,
+        0,
+        3
+      ],
+      "size_m": [
+        8,
+        0.2,
+        3
+      ],
+      "discipline": "architecture",
+      "storey": "L2"
+    },
+    {
+      "id": "L2-north",
+      "type": "wall",
+      "origin_m": [
+        0,
+        5.8,
+        3
+      ],
+      "size_m": [
+        8,
+        0.2,
+        3
+      ],
+      "discipline": "architecture",
+      "storey": "L2"
+    },
+    {
+      "id": "L2-west",
+      "type": "wall",
+      "origin_m": [
+        0,
+        0.2,
+        3
+      ],
+      "size_m": [
+        0.2,
+        5.6,
+        3
+      ],
+      "discipline": "architecture",
+      "storey": "L2"
+    },
+    {
+      "id": "L2-east",
+      "type": "wall",
+      "origin_m": [
+        7.8,
+        0.2,
+        3
+      ],
+      "size_m": [
+        0.2,
+        5.6,
+        3
+      ],
+      "discipline": "architecture",
+      "storey": "L2"
+    },
+    {
+      "id": "L2-partition",
+      "type": "wall",
+      "origin_m": [
+        4,
+        0.2,
+        3
+      ],
+      "size_m": [
+        0.2,
+        5.6,
+        3
+      ],
+      "discipline": "architecture",
+      "storey": "L2"
+    },
+    {
+      "id": "L2-slab",
+      "type": "slab",
+      "origin_m": [
+        0,
+        0,
+        2.8
+      ],
+      "size_m": [
+        8,
+        6,
+        0.2
+      ],
+      "discipline": "architecture",
+      "storey": "L2"
+    },
+    {
+      "id": "L2-west-room",
+      "type": "space",
+      "origin_m": [
+        0.2,
+        0.2,
+        3
+      ],
+      "size_m": [
+        3.8,
+        5.6,
+        2.8
+      ],
+      "discipline": "architecture",
+      "storey": "L2"
+    },
+    {
+      "id": "L2-east-room",
+      "type": "space",
+      "origin_m": [
+        4.2,
+        0.2,
+        3
+      ],
+      "size_m": [
+        3.6,
+        5.6,
+        2.8
+      ],
+      "discipline": "architecture",
+      "storey": "L2"
+    },
+    {
+      "id": "L2-column",
+      "type": "column",
+      "origin_m": [
+        5,
+        3,
+        3
+      ],
+      "size_m": [
+        0.3,
+        0.3,
+        3
+      ],
+      "discipline": "structure",
+      "storey": "L2"
+    },
+    {
+      "id": "roof",
+      "type": "slab",
+      "origin_m": [
+        0,
+        0,
+        6
+      ],
+      "size_m": [
+        8,
+        6,
+        0.2
+      ],
+      "discipline": "architecture",
+      "storey": "L2"
+    },
+    {
+      "id": "service-opening",
+      "type": "opening",
+      "origin_m": [
+        3.9,
+        1,
+        1.8
+      ],
+      "size_m": [
+        0.4,
+        1,
+        1
+      ],
+      "discipline": "architecture",
+      "storey": "L1",
+      "host": "L1-partition"
+    },
+    {
+      "id": "door-opening",
+      "type": "opening",
+      "origin_m": [
+        3.9,
+        4,
+        0
+      ],
+      "size_m": [
+        0.4,
+        0.9,
+        2.1
+      ],
+      "discipline": "architecture",
+      "storey": "L1",
+      "host": "L1-partition"
+    },
+    {
+      "id": "ahu",
+      "type": "equipment",
+      "origin_m": [
+        1,
+        1.1,
+        1.9
+      ],
+      "size_m": [
+        1,
+        0.6,
+        0.6
+      ],
+      "discipline": "mechanical",
+      "storey": "L1",
+      "tag": "AHU-01",
+      "flow_m3_s": 0.18,
+      "ports": [
+        {
+          "id": "ahu-out",
+          "position_m": [
+            2,
+            1.4,
+            2.2
+          ],
+          "direction": "SOURCE"
+        }
+      ]
+    },
+    {
+      "id": "duct-through",
+      "type": "duct",
+      "origin_m": [
+        2,
+        1.2,
+        2
+      ],
+      "size_m": [
+        4,
+        0.4,
+        0.4
+      ],
+      "discipline": "mechanical",
+      "storey": "L1",
+      "tag": "SA-01",
+      "flow_m3_s": 0.18,
+      "ports": [
+        {
+          "id": "through-in",
+          "position_m": [
+            2,
+            1.4,
+            2.2
+          ],
+          "direction": "SINK"
+        },
+        {
+          "id": "through-out",
+          "position_m": [
+            6,
+            1.4,
+            2.2
+          ],
+          "direction": "SOURCE"
+        }
+      ]
+    },
+    {
+      "id": "duct-tail",
+      "type": "duct",
+      "origin_m": [
+        6,
+        1.2,
+        2
+      ],
+      "size_m": [
+        1,
+        0.4,
+        0.4
+      ],
+      "discipline": "mechanical",
+      "storey": "L1",
+      "tag": "SA-02",
+      "flow_m3_s": 0.18,
+      "ports": [
+        {
+          "id": "tail-in",
+          "position_m": [
+            6,
+            1.4,
+            2.2
+          ],
+          "direction": "SINK"
+        },
+        {
+          "id": "tail-free",
+          "position_m": [
+            7,
+            1.4,
+            2.2
+          ],
+          "direction": "SOURCE"
+        }
+      ]
+    },
+    {
+      "id": "duct-blocked",
+      "type": "duct",
+      "origin_m": [
+        2,
+        3.05,
+        2
+      ],
+      "size_m": [
+        4,
+        0.2,
+        0.3
+      ],
+      "discipline": "mechanical",
+      "storey": "L1",
+      "tag": "SA-03",
+      "flow_m3_s": 0.09,
+      "ports": [
+        {
+          "id": "blocked-free",
+          "position_m": [
+            2,
+            3.15,
+            2.15
+          ],
+          "direction": "SINK"
+        }
+      ]
+    },
+    {
+      "id": "duct-clearance",
+      "type": "duct",
+      "origin_m": [
+        3.6,
+        5,
+        1
+      ],
+      "size_m": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "discipline": "mechanical",
+      "storey": "L1",
+      "tag": "SA-04",
+      "clearance_m": 0.2
+    },
+    {
+      "id": "duct-touch",
+      "type": "duct",
+      "origin_m": [
+        3,
+        2.5,
+        1
+      ],
+      "size_m": [
+        1,
+        0.3,
+        0.3
+      ],
+      "discipline": "mechanical",
+      "storey": "L1",
+      "tag": "TOUCH-OK"
+    },
+    {
+      "id": "duct-clearance-boundary",
+      "type": "duct",
+      "origin_m": [
+        3.5,
+        4.95,
+        2.2
+      ],
+      "size_m": [
+        0.3,
+        0.3,
+        0.2
+      ],
+      "discipline": "mechanical",
+      "storey": "L1",
+      "clearance_m": 0.2,
+      "tag": "BOUNDARY-OK"
+    },
+    {
+      "id": "duct-disjoint",
+      "type": "duct",
+      "origin_m": [
+        10,
+        1,
+        2
+      ],
+      "size_m": [
+        1,
+        0.3,
+        0.3
+      ],
+      "discipline": "mechanical",
+      "storey": "L1",
+      "tag": "DISJOINT-OK"
+    },
+    {
+      "id": "pipe-riser",
+      "type": "pipe",
+      "origin_m": [
+        6.8,
+        4.8,
+        0
+      ],
+      "size_m": [
+        0.1,
+        0.1,
+        5.7
+      ],
+      "discipline": "plumbing",
+      "storey": "L1",
+      "tag": "CW-01",
+      "flow_m3_s": 0.0005,
+      "ports": [
+        {
+          "id": "pipe-free",
+          "position_m": [
+            6.85,
+            4.85,
+            0
+          ],
+          "direction": "SINK"
+        }
+      ]
+    },
+    {
+      "id": "upper-duct",
+      "type": "duct",
+      "origin_m": [
+        1,
+        1,
+        5.4
+      ],
+      "size_m": [
+        2,
+        0.4,
+        0.3
+      ],
+      "discipline": "mechanical",
+      "storey": "L2",
+      "tag": "SA-L2",
+      "flow_m3_s": 0.1
+    }
+  ],
+  "connections": [
+    [
+      "ahu-out",
+      "through-in"
+    ],
+    [
+      "through-out",
+      "tail-in"
+    ]
+  ],
+  "site": [
+    {
+      "id": "tower-crane",
+      "type": "crane",
+      "origin_m": [
+        -3,
+        -3,
+        0
+      ],
+      "size_m": [
+        0.6,
+        0.6,
+        12
+      ],
+      "discipline": "site",
+      "storey": "L1",
+      "swing_radius_m": 6,
+      "tag": "TC-01"
+    },
+    {
+      "id": "man-material-hoist",
+      "type": "hoist",
+      "origin_m": [
+        0,
+        -2,
+        0
+      ],
+      "size_m": [
+        1,
+        1,
+        6
+      ],
+      "discipline": "site",
+      "storey": "L1",
+      "tag": "MMH-01"
+    },
+    {
+      "id": "hoist-outside-swing",
+      "type": "hoist",
+      "origin_m": [
+        20,
+        20,
+        0
+      ],
+      "size_m": [
+        1,
+        1,
+        6
+      ],
+      "discipline": "site",
+      "storey": "L1",
+      "tag": "MMH-02"
+    }
+  ]
+}
