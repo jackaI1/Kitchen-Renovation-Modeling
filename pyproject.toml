@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "kitchen-renovation-study"
 version = "0.1.0"
 description = "Reproducible preliminary building-service and wall studies alongside a kitchen model"
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 dependencies = ["ifcopenshell==0.9.0.post1", "ezdxf==1.4.5", "sympy==1.14.0", "pint==0.26.2"]
 
 [project.optional-dependencies]

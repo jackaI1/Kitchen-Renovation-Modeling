@@ -4,10 +4,10 @@ I built a kitchen renovation model because I needed a clearer way to compare the
 
 I also added a Python study tool because I wanted to understand the services and wall layers behind the model. It compares electrical loads and lighting, room heating and cooling, pipe and duct sizes, wall heat and moisture, and building clashes. These calculations use clearly labeled synthetic examples, including a two-storey coordination model. They are learning studies, not measurements or construction instructions for the actual house.
 
-To try the calculations, use Python 3.11 or newer from the repository root:
+To try the calculations, use Python 3.12 or newer from the repository root:
 
 ```sh
-python3 -m venv .venv
+python3.12 -m venv .venv
 source .venv/bin/activate
 python -m pip install -e '.[test]'
 python -m renovation --output output
