@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#e7eff3" />
+    <title>Vessel inspection viewer</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>Vessel inspection</h1>
+        <p>A cutaway view of four compartments. All readings are simulated.</p>
+      </div>
+      <span id="connection" role="status">Connecting…</span>
+    </header>
+    <main>
+      <section class="workspace" aria-label="Vessel model and controls">
+        <div class="toolbar">
+          <label
+            >Colour by
+            <select id="metric">
+              <option value="level">Tank level (%)</option>
+              <option value="temperature">Temperature (°C)</option>
+            </select></label
+          ><label
+            >Simulation
+            <select id="scenario">
+              <option value="normal">Normal operation</option>
+              <option value="flood">Port tank high level</option>
+              <option value="heat">Engine overheating</option>
+            </select></label
+          ><button id="reset">Reset view</button>
+        </div>
+        <div
+          id="viewport"
+          aria-label="Interactive 3D vessel. Drag to orbit, scroll to zoom, or choose a compartment in the readings list."
+        >
+          <p id="loading" role="status">Loading vessel model…</p>
+        </div>
+        <div class="view-footer">
+          <span id="model-status" role="status">Checking model…</span
+          ><button id="xr" disabled>Enter immersive view</button>
+        </div>
+        <p id="xr-status">Checking headset support…</p>
+        <p class="help">
+          Drag to rotate · Scroll or pinch to zoom · Select a compartment to
+          inspect
+        </p>
+      </section>
+      <aside>
+        <h2>Compartment readings</h2>
+        <p id="selection" role="status">
+          Select a compartment in the model or the list.
+        </p>
+        <div id="readings"></div>
+        <div class="legend">
+          <span><i class="normal"></i>Normal</span
+          ><span><i class="watch"></i>Watch</span
+          ><span><i class="alarm"></i>Alarm</span
+          ><span><i class="stale"></i>Stale</span>
+        </div>
+        <p id="thresholds"></p>
+        <p class="help">
+          A grey compartment has no fresh reading. Readings stop being trusted
+          after 5 seconds.
+        </p>
+        <p id="updated">Waiting for first reading</p>
+      </aside>
+    </main>
+    <footer>
+      This simplified 12 m hull is for inspection practice, not navigation or
+      vessel safety decisions.
+      <a href="https://github.com/jackaI1/vessel-3d-viewer"
+        >Source and import guide</a
+      >
+    </footer>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

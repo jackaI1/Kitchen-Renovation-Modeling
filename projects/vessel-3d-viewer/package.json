@@ -1,0 +1,34 @@
+{
+  "name": "vessel-3d-viewer",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx server/index.ts",
+    "start": "tsx server/index.ts --production",
+    "test": "vitest run",
+    "test:python": "python3 -m unittest discover -s pipeline -p 'test_*.py' -v",
+    "test:browser": "playwright test",
+    "model:build": "blender --background --factory-startup --python-exit-code 1 --python pipeline/export_vessel.py",
+    "model:validate": "tsx pipeline/validate-glb.ts",
+    "build": "tsc --noEmit && vite build",
+    "check": "npm test && npm run test:python && npm run model:validate && npm run build"
+  },
+  "dependencies": {
+    "three": "^0.180.0",
+    "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "@types/node": "^24.0.0",
+    "@types/three": "^0.180.0",
+    "@types/ws": "^8.18.1",
+    "esbuild": "^0.28.2",
+    "gltf-validator": "^2.0.0-dev.3.10",
+    "iwer": "^2.8.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0",
+    "vite": "^7.1.0",
+    "vitest": "^5.1.0"
+  }
+}

@@ -1,0 +1,271 @@
+:root {
+  font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  color: #18394c;
+  background: #f6f9fa;
+  font-synthesis: none;
+  font-size: 16px;
+  line-height: 1.5;
+  --line: #c2d2dc;
+  --marine: #18394c;
+  --blue: #247da0;
+  --watch: #a26300;
+  --alarm: #ba342e;
+  --stale: #737f89;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+button,
+select {
+  font: inherit;
+  color: inherit;
+  background: #fff;
+  border: 1px solid #8fa9ba;
+  border-radius: 5px;
+  min-height: 42px;
+  padding: 7px 12px;
+}
+button {
+  cursor: pointer;
+}
+button:hover:not(:disabled),
+select:hover {
+  background: #e7eff3;
+}
+button:disabled {
+  opacity: 0.65;
+  cursor: default;
+}
+button:focus-visible,
+select:focus-visible,
+a:focus-visible {
+  outline: 3px solid #247da0;
+  outline-offset: 3px;
+}
+::selection {
+  background: #c7e7f2;
+  color: #18394c;
+}
+header {
+  padding: 26px 32px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+}
+h1 {
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  margin: 0 0 8px;
+}
+p {
+  margin: 0 0 14px;
+  max-width: 70ch;
+}
+header p {
+  margin: 0;
+}
+#connection {
+  font-weight: 600;
+  white-space: nowrap;
+  font-size: 0.9rem;
+}
+main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 28px;
+  padding: 24px 32px;
+  max-width: 1800px;
+  margin: auto;
+}
+.workspace {
+  min-width: 0;
+}
+.toolbar {
+  display: flex;
+  align-items: end;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+#viewport {
+  height: clamp(350px, 56vh, 700px);
+  background: #e7eff3;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+#loading {
+  position: absolute;
+  inset: 40% 0;
+  text-align: center;
+  padding: 20px;
+  pointer-events: none;
+}
+.view-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  padding: 14px 0 8px;
+}
+#model-status,
+#xr-status,
+.help,
+#updated {
+  font-size: 0.83rem;
+  color: #496575;
+}
+#xr-status {
+  margin-bottom: 5px;
+}
+aside {
+  border-left: 1px solid var(--line);
+  padding-left: 24px;
+}
+h2 {
+  font-size: 1.15rem;
+  margin: 0 0 10px;
+}
+#selection {
+  font-size: 0.9rem;
+  min-height: 44px;
+}
+#readings button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: 0;
+  border-radius: 0;
+  border-top: 1px solid var(--line);
+  padding: 17px 8px;
+  background: transparent;
+}
+#readings button[aria-pressed="true"] {
+  background: #dfedf3;
+}
+#readings strong {
+  display: block;
+  font-size: 1rem;
+}
+.reading-values {
+  display: flex;
+  justify-content: space-between;
+  font-variant-numeric: tabular-nums;
+  margin-top: 4px;
+}
+.reading-status {
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 24px 0 12px;
+  font-size: 0.8rem;
+}
+.legend span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.legend i {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+.normal {
+  background: var(--blue);
+}
+.watch {
+  background: var(--watch);
+}
+.alarm {
+  background: var(--alarm);
+}
+.stale {
+  background: var(--stale);
+}
+#thresholds {
+  font-size: 0.83rem;
+}
+footer {
+  padding: 16px 32px 28px;
+  font-size: 0.8rem;
+  color: #496575;
+  border-top: 1px solid var(--line);
+}
+a {
+  color: #176583;
+  text-underline-offset: 3px;
+}
+#xr {
+  background: #18394c;
+  color: white;
+}
+#xr:hover:not(:disabled) {
+  background: #2b5369;
+}
+@media (max-width: 850px) {
+  header {
+    padding: 20px;
+    align-items: start;
+    flex-direction: column;
+    gap: 12px;
+  }
+  main {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 24px;
+  }
+  aside {
+    border-left: 0;
+    padding-left: 0;
+    border-top: 1px solid var(--line);
+    padding-top: 24px;
+  }
+  #viewport {
+    height: 380px;
+  }
+  .toolbar {
+    gap: 8px;
+  }
+  .toolbar label {
+    flex: 1;
+    min-width: 145px;
+  }
+  select {
+    width: 100%;
+    max-width: 100%;
+  }
+  .view-footer {
+    flex-wrap: wrap;
+  }
+  footer {
+    padding: 20px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto;
+  }
+}

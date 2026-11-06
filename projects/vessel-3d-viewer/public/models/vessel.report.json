@@ -1,0 +1,37 @@
+{
+  "source": "vessel.json",
+  "units": "metres",
+  "parts": [
+    {
+      "name": "hull",
+      "vertices_before": 20,
+      "vertices_after": 20,
+      "triangles": 28
+    },
+    {
+      "name": "tank_port",
+      "vertices_before": 8,
+      "vertices_after": 8,
+      "triangles": 12
+    },
+    {
+      "name": "tank_starboard",
+      "vertices_before": 8,
+      "vertices_after": 8,
+      "triangles": 12
+    },
+    {
+      "name": "tank_freshwater",
+      "vertices_before": 8,
+      "vertices_after": 8,
+      "triangles": 12
+    },
+    {
+      "name": "engine_room",
+      "vertices_before": 8,
+      "vertices_after": 8,
+      "triangles": 12
+    }
+  ],
+  "bytes": 9644
+}
