@@ -1,0 +1,13 @@
+# Electrical equations I can follow
+
+I wanted calculation pages where I can see the formula, every input and the units beside the answer. The notebooks use the same functions as the HTML export, so the explanation and the calculation stay together.
+
+From the repository root, install `python -m pip install -e '.[test]'`. Run `python -m renovation --output output` and open `output/sheets/electrical-sheets.html`. The page works without an internet connection. `notebooks/branch-cable.ipynb` covers ampacity and voltage drop; `notebooks/transformer-fault.ipynb` covers loading, transformer impedance and fault current. Open either in a Jupyter-compatible editor and run all cells with the installed Python environment. CI executes both from the repository root and uploads the executed copies.
+
+`renovation.sheets.calculate(name, expression, inputs, result_unit)` takes a SymPy expression and a dictionary of pint quantities. SymPy preserves the symbolic equation and substitutes scalar SI values. A second evaluation carries physical units through each addition, multiplication and power. Conversion to the requested output unit rejects dimensional mistakes, and the SI magnitude must agree with the symbolic answer before export. Inputs must be finite scalars with units; electrical current must also be positive. The supported expression language is deliberately small, with no arbitrary code evaluation.
+
+For example, `2*I*R*L` with 10 A, 2 ohm/km and 30 m gives 1.2 V. Supplying metres where amperes belong raises a dimensional error. Each exported sheet includes the original units, SI substitutions and the checked result. The branch notebook passes the unit-checked required current to the panel module's bounded published conductor table. These are MathCAD-style calculation pages, not files for proprietary MathCAD software.
+
+The worked transformer is 75 kVA, 208 V, with 5% impedance and an infinite upstream source. Rated current is `S/(sqrt(3)*V)`, impedance magnitude is `z_pu*V²/S`, and terminal symmetrical three-phase fault current is `V/(sqrt(3)*|Z|)`. The panel study adds each feeder's complex R+jX before taking its magnitude. Continuous branch load uses 1.25 times current. Single-phase voltage drop is `2 I L (R pf + X sqrt(1-pf²))`. All impedances and lengths are explicit assumptions; no sheet approves a real installation.
+
+References: [Pint quantities and conversions](https://pint.readthedocs.io/en/stable/getting/tutorial.html), [SymPy substitution](https://docs.sympy.org/latest/tutorials/intro-tutorial/basic_operations.html), and the [electrical method and source tables](electrical.md).

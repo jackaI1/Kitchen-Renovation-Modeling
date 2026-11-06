@@ -1,0 +1,33 @@
+name: Renovation studies
+on:
+  push:
+    branches: [main, 'skills/**']
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install native Python wheel dependencies
+        run: python -m pip install -e '.[test]'
+      - name: Run hand calculations, IFC reopening and validation tests
+        run: python -m pytest -q
+      - name: Preserve original unittest checks
+        run: python -m unittest discover -s tests -v
+      - name: Generate every synthetic study
+        run: python -m renovation --output output
+      - name: Execute readable calculation notebooks
+        run: python scripts/execute_notebooks.py --output output/notebooks
+      - name: Upload reports, IFC models and drawings
+        uses: actions/upload-artifact@v4
+        with:
+          name: renovation-studies
+          path: output/

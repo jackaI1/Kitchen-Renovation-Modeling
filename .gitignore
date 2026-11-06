@@ -8,3 +8,10 @@
 __pycache__/
 frames/
 *.copying
+.venv/
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+output/
+.ipynb_checkpoints/

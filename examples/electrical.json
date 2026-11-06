@@ -1,0 +1,33 @@
+{
+  "description": "Synthetic two-storey kitchen coordination study; balanced panel equivalents, not the owner's house",
+  "voltage_ll_v": 208,
+  "ambient_c": 30,
+  "temperature_rating_c": 75,
+  "derating_factor": 1,
+  "drop_limit_pct": 3,
+  "total_drop_limit_pct": 5,
+  "transformer": {"rating_kva": 75, "impedance_pct": 5, "x_r_ratio": 3},
+  "panels": [
+    {"id": "MAIN", "parent": null, "breaker_a": 100, "interrupt_ka": 10, "length_m": 2},
+    {"id": "KITCHEN", "parent": "MAIN", "breaker_a": 60, "interrupt_ka": 10, "length_m": 18},
+    {"id": "UPPER", "parent": "MAIN", "breaker_a": 40, "interrupt_ka": 10, "length_m": 25}
+  ],
+  "circuits": [
+    {"id": "range", "panel": "KITCHEN", "load_va": 8000, "demand_factor": 0.65, "continuous": false, "power_factor": 1, "phases": 1, "voltage_v": 208, "length_m": 12, "breaker_a": 40, "interrupt_ka": 10},
+    {"id": "dishwasher", "panel": "KITCHEN", "load_va": 1500, "demand_factor": 1, "continuous": false, "power_factor": 0.9, "phases": 1, "voltage_v": 120, "length_m": 15, "breaker_a": 20, "interrupt_ka": 10},
+    {"id": "counter", "panel": "KITCHEN", "load_va": 1800, "demand_factor": 0.75, "continuous": false, "power_factor": 1, "phases": 1, "voltage_v": 120, "length_m": 20, "breaker_a": 20, "interrupt_ka": 10},
+    {"id": "lighting", "panel": "KITCHEN", "load_va": 600, "demand_factor": 1, "continuous": true, "power_factor": 0.95, "phases": 1, "voltage_v": 120, "length_m": 22, "breaker_a": 15, "interrupt_ka": 10},
+    {"id": "upper-receptacles", "panel": "UPPER", "load_va": 3600, "demand_factor": 0.5, "continuous": false, "power_factor": 1, "phases": 1, "voltage_v": 120, "length_m": 25, "breaker_a": 20, "interrupt_ka": 10},
+    {"id": "ventilation", "panel": "MAIN", "load_va": 1500, "demand_factor": 1, "continuous": true, "power_factor": 0.85, "phases": 3, "voltage_v": 208, "length_m": 15, "breaker_a": 15, "interrupt_ka": 10}
+  ],
+  "room": {
+    "width_m": 5, "depth_m": 4, "height_m": 2.8, "workplane_m": 0.9,
+    "grid_x_m": [0.5, 1.5, 2.5, 3.5, 4.5], "grid_y_m": [0.5, 1.5, 2.5, 3.5],
+    "luminaires": [
+      {"x_m": 1.25, "y_m": 1, "z_m": 2.7, "candela": [[0, 650], [15, 625], [30, 540], [45, 400], [60, 220], [75, 70], [90, 0]]},
+      {"x_m": 3.75, "y_m": 1, "z_m": 2.7, "candela": [[0, 650], [15, 625], [30, 540], [45, 400], [60, 220], [75, 70], [90, 0]]},
+      {"x_m": 1.25, "y_m": 3, "z_m": 2.7, "candela": [[0, 650], [15, 625], [30, 540], [45, 400], [60, 220], [75, 70], [90, 0]]},
+      {"x_m": 3.75, "y_m": 3, "z_m": 2.7, "candela": [[0, 650], [15, 625], [30, 540], [45, 400], [60, 220], [75, 70], [90, 0]]}
+    ]
+  }
+}
