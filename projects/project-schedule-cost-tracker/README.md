@@ -2,6 +2,8 @@
 
 I built a project delivery tracker to learn how the underlying idea works. This is a learning project.
 
+I use an illustrative capital-project schedule and costs for the bundled examples.
+
 ## Try it
 
 Install Python 3.9 or newer, then run:
