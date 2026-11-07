@@ -35,6 +35,10 @@ npm run model:validate
 
 On macOS, if Blender is not on PATH:
 
+```sh
+/Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup --python-exit-code 1 --python pipeline/export_vessel.py
+```
+
 The [import guide](docs/import-pipeline.md) covers storing source files, processing them, validating the export, importing it into the viewer, and changing a compartment without breaking its sensor mapping. My simplified 12 m hull is original geometry, not a scan or a seaworthiness model.
 
 ## How the live view works
