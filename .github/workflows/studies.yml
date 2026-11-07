@@ -1,8 +1,10 @@
 name: Renovation studies
 on:
   push:
+    paths-ignore: ['projects/**']
     branches: [main, 'skills/**']
   pull_request:
+    paths-ignore: ['projects/**']
 permissions:
   contents: read
 jobs:
