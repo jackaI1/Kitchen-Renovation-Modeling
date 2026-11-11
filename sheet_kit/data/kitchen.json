@@ -1,0 +1,51 @@
+{
+  "project": {
+    "title": "Kitchen Renovation",
+    "subtitle": "Selected design coordination set",
+    "date": "2026-10-22",
+    "revision": "B",
+    "sheet_number": "G001",
+    "sheet_title": "Title block and notes",
+    "scale_note": "Print at 100 percent on 24 x 18 in paper. Units are inches."
+  },
+  "sheets": [
+    {"number": "A101", "title": "Plan", "source": "A101.pdf"},
+    {"number": "A201", "title": "Range wall", "source": "A201.pdf"},
+    {"number": "A202", "title": "Sink and window", "source": "A202.pdf"},
+    {"number": "A203", "title": "Pantry and fridge", "source": "A203.pdf"},
+    {"number": "A401", "title": "Island", "source": "A401.pdf"},
+    {"number": "A402", "title": "Pullouts and pocket door", "source": "A402.pdf"},
+    {"number": "A501", "title": "Stone junctions", "source": "A501.pdf"},
+    {"number": "A502", "title": "Window porcelain", "source": "A502.pdf"},
+    {"number": "A602", "title": "Hood and B03 backsplash", "source": "A602.pdf"}
+  ],
+  "revisions": [
+    {"rev": "B", "date": "2026-10-22", "change": "Selected hood, 30 in above the counter"},
+    {"rev": "B", "date": "2026-10-22", "change": "Separate stepped B03 range backsplash"},
+    {"rev": "B", "date": "2026-10-22", "change": "Full-height spice and utensil pullouts"},
+    {"rev": "B", "date": "2026-10-22", "change": "15 in waste bay with two tandem bins"},
+    {"rev": "B", "date": "2026-10-22", "change": "Pocket-door pull inside left, 36 in pocket"},
+    {"rev": "B", "date": "2026-10-22", "change": "Three top horizontal pulls at 33.10 in"}
+  ],
+  "finishes": [
+    {"item": "Cabinetry", "finish": "Vertically grained white oak", "location": "Base and wall cabinets", "status": "Selected"},
+    {"item": "Doors and cladding", "finish": "White porcelain", "location": "Per sheet A502", "status": "Selected"},
+    {"item": "Island and counters", "finish": "Quartz", "location": "Island and stone edges", "status": "Selected"},
+    {"item": "Range hood", "finish": "Sakura hood", "location": "Above electric range", "status": "Confirm size"},
+    {"item": "Range backsplash", "finish": "Material to confirm", "location": "B03 stepped detail", "status": "To confirm"},
+    {"item": "Cabinet pulls", "finish": "Hardware finish to confirm", "location": "Three top pulls at 33.10 in", "status": "To confirm"}
+  ],
+  "notes": [
+    "Preliminary design coordination set. It is not a fabrication release, permit drawing or approval to cut stone.",
+    "Confirm the actual Sakura hood before ordering. Final front and hood dimensions depend on that unit.",
+    "B03 backsplash: lower edge 31 in, five inches below the countertop. Stone heights are derived study values, not field measurements.",
+    "Pocket door: pull on the inside left. The leaf slides into a 36 in pocket, starting 7.25 in from the cabinet end.",
+    "Bin capacities, runner ratings and supplier products are not selected yet.",
+    "Check every field dimension on site before cutting stone or building cabinets.",
+    "Contractor PDF is scaled to 11 x 8.25 in. Take measurements only from the 24 x 18 in print."
+  ],
+  "photos": [
+    {"id": "existing-range-wall", "caption": "Existing range wall"},
+    {"id": "existing-sink-window", "caption": "Existing sink and window"}
+  ]
+}

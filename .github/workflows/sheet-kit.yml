@@ -1,0 +1,77 @@
+name: Sheet kit
+on:
+  push:
+    branches: [main, 'skills/**']
+    paths:
+      - sheet_kit/**
+      - tests/test_sheet_kit.py
+      - .github/workflows/sheet-kit.yml
+  pull_request:
+    paths:
+      - sheet_kit/**
+      - tests/test_sheet_kit.py
+      - .github/workflows/sheet-kit.yml
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Inkscape, GIMP and a virtual display for batch runs
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y inkscape gimp xvfb
+          inkscape --version
+          gimp --version || true
+      - name: Install sheet kit Python dependencies
+        run: python -m pip install -r sheet_kit/requirements.txt
+      - name: Run sheet kit tests, including the real GIMP batch test
+        run: SHEET_KIT_GIMP="$(command -v gimp)" xvfb-run -a python -m pytest -q tests/test_sheet_kit.py
+      - name: Check the template opens in Inkscape and every text box is present
+        run: |
+          inkscape --query-all sheet_kit/template/title_block.svg > query.txt
+          for id in 'text:title' 'text:notes' 'text:table:sheets:header:number' 'frame:photo-1'; do
+            grep -q "^$id," query.txt || { echo "missing $id"; exit 1; }
+          done
+          echo "Inkscape query found $(wc -l < query.txt) objects"
+      - name: Build sheets with real GIMP-cleaned photos
+        run: |
+          python - <<'PY'
+          from PIL import Image
+          import pathlib
+          folder = pathlib.Path('ci-photos')
+          folder.mkdir(exist_ok=True)
+          for name, colour in [('existing-range-wall', (150, 120, 90)), ('existing-sink-window', (90, 120, 150))]:
+              Image.new('RGB', (2400, 1600), colour).save(folder / f'{name}.png')
+          PY
+          xvfb-run -a python -m sheet_kit --output output/sheet-kit --photos ci-photos --gimp "$(command -v gimp)"
+          python -c "import json;m=json.load(open('output/sheet-kit/manifest.json'));assert m['photos_used']==['existing-range-wall','existing-sink-window'], m;print('GIMP cleaned', m['photos_used'])"
+      - name: Confirm exported page sizes and pixels
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from PIL import Image
+          import pypdfium2 as pdfium
+          out = Path('output/sheet-kit')
+          doc = pdfium.PdfDocument(str(out / 'kitchen-sheets-print-24x18.pdf'))
+          assert doc[0].get_size() == (1728.0, 1296.0), doc[0].get_size()
+          doc.close()
+          doc = pdfium.PdfDocument(str(out / 'kitchen-sheets-contractor-11x8.25.pdf'))
+          assert doc[0].get_size() == (792.0, 594.0), doc[0].get_size()
+          doc.close()
+          assert Image.open(out / 'kitchen-sheets-share-3000x2250.png').size == (3000, 2250)
+          print('print 24x18 in, contractor 11x8.25 in, share 3000x2250 px: all sizes match')
+          PY
+      - name: Upload sheet exports
+        uses: actions/upload-artifact@v4
+        with:
+          name: sheet-kit
+          path: output/sheet-kit/

@@ -102,6 +102,23 @@ cd Kitchen-Renovation-Modeling
 git lfs pull
 ```
 
+## Sheets for the contractor
+
+I built a sheet kit that turns my kitchen drawing details into print-ready sheets and cleaned site photos, because my drawings and photos go to contractors in several formats, and I wanted every version to come from one source. The sheet is an editable Inkscape file, a free drawing program. It holds the title block, the sheet list, the revision table, the finish schedule and the notes. The site photos go through GIMP, a free photo editor, so they are the same size and tone on the sheet.
+
+The layout and the wording live in two places. The layout is a single SVG file that I can open in Inkscape and move boxes around. The text is in `sheet_kit/data/kitchen.json`. One command reads both and writes three files: a 24 by 18 inch PDF to print at full size, an 11 by 8.25 inch PDF for the contractor, and a PNG for sharing. Before it writes anything, it measures every line of text against its box. If a line would be cut off, the build stops and names the box, so a clipped sheet never goes out.
+
+To make the sheets, run these from the repository root:
+
+```sh
+python -m pip install -r sheet_kit/requirements.txt
+python -m sheet_kit --output output/sheet-kit
+```
+
+Site photos stay out of the repository. Put them in a folder outside it, named after the photo IDs in `kitchen.json`, and add `--photos your-folder --gimp /path/to/gimp` to clean them with GIMP first. Without photos, the frames are left empty and the captions say "photo to add".
+
+Technically, the build is a small Python package in `sheet_kit/`. It uses svglib to convert the SVG to a PDF with reportlab, and pypdfium2 to render the PNG from that PDF, so the three files always match. The GIMP cleanup is a Script-Fu script that crops each photo to its frame's shape, stretches the levels, sharpens lightly and scales it to a fixed width. Tests check the page sizes, the PNG size, that every text box fits, that the same input gives the same bytes, and that a photo with the wrong shape is refused. GitHub Actions installs Inkscape and GIMP on Ubuntu, runs the tests, builds the sheets with cleaned photos and checks the output sizes. Design notes are in [docs/sheet-kit.md](docs/sheet-kit.md).
+
 ## Use and verification
 
 This package supports onsite discussion, layout review and design decisions. It is a coordination study, not a fabrication release. Confirm the actual Sakura hood, final stone templates, selected hardware and relevant field dimensions before ordering or construction. Proposed organizers and bin layouts illustrate the intended arrangement; final supplier specifications and load ratings remain to be confirmed.
@@ -116,7 +133,7 @@ I separated the calculation modules so I can follow one method at a time. JSON i
 
 The calculation sheets use SymPy to keep the equation visible and pint to carry the units through the arithmetic. I compare the symbolic SI substitution with the dimension-checked value before export. Tests cover hand calculations, bad inputs, seeded collisions, opening false positives, actual IFC reopening and DXF entities. GitHub Actions runs the full tests, regenerates all five study reports, executes both notebooks and uploads the models, drawings and reports as a downloadable artifact on every change. Existing Blender and AutoCAD deliverables remain available above.
 
-The current suite has 117 passing tests, including the three original wall checks. The deterministic example produces three panels, six circuits, a 20-point lighting grid, three wall studies and 34 IFC elements with 19 intentionally seeded review issues. Both calculation notebooks execute in CI; the runner records and verifies cleanup of each temporary kernel.
+The current suite has 127 passing tests, including the three original wall checks and ten sheet-kit checks. A GIMP batch test for the sheet kit runs only in its own workflow, where GIMP is installed. The deterministic example produces three panels, six circuits, a 20-point lighting grid, three wall studies and 34 IFC elements with 19 intentionally seeded review issues. Both calculation notebooks execute in CI; the runner records and verifies cleanup of each temporary kernel.
 
 
 ## Other things I've built here

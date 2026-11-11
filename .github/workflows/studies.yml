@@ -19,7 +19,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Install native Python wheel dependencies
-        run: python -m pip install -e '.[test]'
+        run: python -m pip install -e '.[test,sheet-kit]'
       - name: Run hand calculations, IFC reopening and validation tests
         run: python -m pytest -q
       - name: Preserve original unittest checks
