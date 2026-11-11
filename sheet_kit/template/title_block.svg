@@ -35,10 +35,10 @@
     <text id="text:table:finishes:header:location" x="808" y="866" style="font-family:Helvetica;font-weight:bold;font-size:24px;fill:#111">Location</text>
     <text id="text:table:finishes:header:status" x="1148" y="866" style="font-family:Helvetica;font-weight:bold;font-size:24px;fill:#111">Status</text>
     <text id="text:header:notes" x="1368" y="832" style="font-family:Helvetica;font-weight:bold;font-size:28px;fill:#111">Notes</text>
-    <text id="text:notes" x="1368" y="866" style="font-family:Helvetica;font-size:24px;fill:#111"/>
+    <text id="text:notes" x="1368" y="866" style="font-family:Helvetica;font-size:24px;fill:#111">Notes are filled from kitchen.json</text>
     <text id="text:header:photos" x="88" y="1412" style="font-family:Helvetica;font-weight:bold;font-size:28px;fill:#111">Site photos</text>
-    <text id="text:caption:photo-1" x="88" y="1704" style="font-family:Helvetica;font-size:24px;fill:#111"/>
-    <text id="text:caption:photo-2" x="708" y="1704" style="font-family:Helvetica;font-size:24px;fill:#111"/>
+    <text id="text:caption:photo-1" x="88" y="1704" style="font-family:Helvetica;font-size:24px;fill:#111">Photo 1 caption</text>
+    <text id="text:caption:photo-2" x="708" y="1704" style="font-family:Helvetica;font-size:24px;fill:#111">Photo 2 caption</text>
   </g>
   <g inkscape:groupmode="layer" inkscape:label="Guides (removed on export)" id="layer-guides" style="display:inline">
     <rect id="box:title" x="1420" y="1400" width="880" height="70" style="fill:none;stroke:#f0a;stroke-width:1.5;stroke-dasharray:6 4"/>
