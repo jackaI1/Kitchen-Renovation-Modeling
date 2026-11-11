@@ -133,7 +133,7 @@ I separated the calculation modules so I can follow one method at a time. JSON i
 
 The calculation sheets use SymPy to keep the equation visible and pint to carry the units through the arithmetic. I compare the symbolic SI substitution with the dimension-checked value before export. Tests cover hand calculations, bad inputs, seeded collisions, opening false positives, actual IFC reopening and DXF entities. GitHub Actions runs the full tests, regenerates all five study reports, executes both notebooks and uploads the models, drawings and reports as a downloadable artifact on every change. Existing Blender and AutoCAD deliverables remain available above.
 
-The current suite has 117 passing tests, including the three original wall checks. The deterministic example produces three panels, six circuits, a 20-point lighting grid, three wall studies and 34 IFC elements with 19 intentionally seeded review issues. Both calculation notebooks execute in CI; the runner records and verifies cleanup of each temporary kernel.
+The current suite has 127 passing tests, including the three original wall checks and ten sheet-kit checks. A GIMP batch test for the sheet kit runs only in its own workflow, where GIMP is installed. The deterministic example produces three panels, six circuits, a 20-point lighting grid, three wall studies and 34 IFC elements with 19 intentionally seeded review issues. Both calculation notebooks execute in CI; the runner records and verifies cleanup of each temporary kernel.
 
 
 ## Other things I've built here
