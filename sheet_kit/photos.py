@@ -37,8 +37,7 @@ def clean_photo(gimp, source, destination, width, ratio):
     command = [
         str(gimp), '-i', '--no-data', '--no-fonts', '--no-splash',
         '--batch-interpreter=plug-in-script-fu-eval',
-        '-b', f'(load {_scheme_string(SCRIPT)})',
-        '-b', call,
+        '-b', SCRIPT.read_text(encoding='utf-8') + '\n' + call,
         '-b', '(gimp-quit 0)',
     ]
     completed = subprocess.run(command, capture_output=True, text=True, timeout=TIMEOUT_SECONDS)
