@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Kitchen title block and notes sheet. Edit in Inkscape (Inkscape SVG).
+     Sheet layer is exported. Guides layer holds the text boxes that the build checks
+     and is removed from every export. Text ids must match a box id:
+     text:<name> uses box:<name>; table cells use box:table:<name>:<column>. -->
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     width="24in" height="18in" viewBox="0 0 2400 1800" version="1.1"
+     sodipodi:docname="title_block.svg">
+  <g inkscape:groupmode="layer" inkscape:label="Sheet" id="layer-sheet">
+    <rect id="frame" x="40" y="40" width="2320" height="1720" style="fill:none;stroke:#222;stroke-width:4"/>
+    <rect id="title-block-frame" x="1400" y="1380" width="920" height="340" style="fill:none;stroke:#222;stroke-width:3"/>
+    <rect id="frame:photo-1" x="80" y="1430" width="600" height="240" style="fill:#eeeeee;stroke:#666;stroke-width:2"/>
+    <rect id="frame:photo-2" x="700" y="1430" width="600" height="240" style="fill:#eeeeee;stroke:#666;stroke-width:2"/>
+    <text id="text:title" x="1428" y="1456" style="font-family:Helvetica;font-weight:bold;font-size:56px;fill:#111">Kitchen Renovation</text>
+    <text id="text:subtitle" x="1428" y="1509" style="font-family:Helvetica;font-size:34px;fill:#111">Selected design coordination set</text>
+    <text id="text:date" x="1428" y="1560" style="font-family:Helvetica;font-size:30px;fill:#111">Date</text>
+    <text id="text:revision" x="1868" y="1560" style="font-family:Helvetica;font-size:30px;fill:#111">Revision</text>
+    <text id="text:sheet-number" x="1428" y="1655" style="font-family:Helvetica;font-weight:bold;font-size:60px;fill:#111">G001</text>
+    <text id="text:sheet-title" x="1868" y="1624" style="font-family:Helvetica;font-size:30px;fill:#111">Title block and notes</text>
+    <text id="text:scale-note" x="1428" y="1694" style="font-family:Helvetica;font-size:24px;fill:#111">Print at 100 percent on 24 x 18 in paper.</text>
+    <text id="text:header:sheets" x="88" y="128" style="font-family:Helvetica;font-weight:bold;font-size:28px;fill:#111">Sheet index</text>
+    <text id="text:table:sheets:header:number" x="88" y="128" style="font-family:Helvetica;font-weight:bold;font-size:26px;fill:#111">Sheet</text>
+    <text id="text:table:sheets:header:title" x="208" y="128" style="font-family:Helvetica;font-weight:bold;font-size:26px;fill:#111">Title</text>
+    <text id="text:table:sheets:header:source" x="538" y="128" style="font-family:Helvetica;font-weight:bold;font-size:26px;fill:#111">File</text>
+    <text id="text:table:revisions:header:rev" x="828" y="128" style="font-family:Helvetica;font-weight:bold;font-size:26px;fill:#111">Rev</text>
+    <text id="text:table:revisions:header:date" x="938" y="128" style="font-family:Helvetica;font-weight:bold;font-size:26px;fill:#111">Date</text>
+    <text id="text:table:revisions:header:change" x="1218" y="128" style="font-family:Helvetica;font-weight:bold;font-size:26px;fill:#111">Change</text>
+    <text id="text:header:revisions" x="828" y="82" style="font-family:Helvetica;font-weight:bold;font-size:28px;fill:#111">Revisions</text>
+    <text id="text:header:finishes" x="88" y="832" style="font-family:Helvetica;font-weight:bold;font-size:28px;fill:#111">Finish schedule</text>
+    <text id="text:table:finishes:header:item" x="88" y="866" style="font-family:Helvetica;font-weight:bold;font-size:24px;fill:#111">Item</text>
+    <text id="text:table:finishes:header:finish" x="388" y="866" style="font-family:Helvetica;font-weight:bold;font-size:24px;fill:#111">Finish</text>
+    <text id="text:table:finishes:header:location" x="808" y="866" style="font-family:Helvetica;font-weight:bold;font-size:24px;fill:#111">Location</text>
+    <text id="text:table:finishes:header:status" x="1148" y="866" style="font-family:Helvetica;font-weight:bold;font-size:24px;fill:#111">Status</text>
+    <text id="text:header:notes" x="1368" y="832" style="font-family:Helvetica;font-weight:bold;font-size:28px;fill:#111">Notes</text>
+    <text id="text:notes" x="1368" y="866" style="font-family:Helvetica;font-size:24px;fill:#111"/>
+    <text id="text:header:photos" x="88" y="1412" style="font-family:Helvetica;font-weight:bold;font-size:28px;fill:#111">Site photos</text>
+    <text id="text:caption:photo-1" x="88" y="1704" style="font-family:Helvetica;font-size:24px;fill:#111"/>
+    <text id="text:caption:photo-2" x="708" y="1704" style="font-family:Helvetica;font-size:24px;fill:#111"/>
+  </g>
+  <g inkscape:groupmode="layer" inkscape:label="Guides (removed on export)" id="layer-guides" style="display:inline">
+    <rect id="box:title" x="1420" y="1400" width="880" height="70" style="fill:none;stroke:#f0a;stroke-width:1.5;stroke-dasharray:6 4"/>
+    <rect id="box:subtitle" x="1420" y="1475" width="880" height="44" style="fill:none;stroke:#f0a;stroke-width:1.5;stroke-dasharray:6 4"/>
+    <rect id="box:date" x="1420" y="1530" width="420" height="40" style="fill:none;stroke:#f0a;stroke-width:1.5;stroke-dasharray:6 4"/>
+    <rect id="box:revision" x="1860" y="1530" width="440" height="40" style="fill:none;stroke:#f0a;stroke-width:1.5;stroke-dasharray:6 4"/>
+    <rect id="box:sheet-number" x="1420" y="1585" width="420" height="80" style="fill:none;stroke:#f0a;stroke-width:1.5;stroke-dasharray:6 4"/>
+    <rect id="box:sheet-title" x="1860" y="1600" width="440" height="40" style="fill:none;stroke:#f0a;stroke-width:1.5;stroke-dasharray:6 4"/>
+    <rect id="box:scale-note" x="1420" y="1670" width="880" height="36" style="fill:none;stroke:#f0a;stroke-width:1.5;stroke-dasharray:6 4"/>
+    <rect id="box:header:sheets" x="80" y="60" width="680" height="40" style="fill:none;stroke:#f0a;stroke-width:1.5;stroke-dasharray:6 4"/>
+    <rect id="box:table:sheets:header:number" x="80" y="100" width="110" height="40" style="fill:none;stroke:#f0a;stroke-width:1.5;stroke-dasharray:6 4"/>
+    <rect id="box:table:sheets:header:title" x="200" y="100" width="320" height="40" style="fill:none;stroke:#f0a;stroke-width:1.5;stroke-dasharray:6 4"/>
+    <rect id="box:table:sheets:header:source" x="530" y="100" width="230" height="40" style="fill:none;stroke:#f0a;stroke-width:1.5;stroke-dasharray:6 4"/>
+    <g id="table:sheets" data-pitch="56" data-font-size="26" data-columns="number,title,source" data-limit-y="760">
+      <rect id="box:table:sheets:number" x="80" y="160" width="110" height="44" style="fill:none;stroke:#0af;stroke-width:1.5;stroke-dasharray:6 4"/>
+      <rect id="box:table:sheets:title" x="200" y="160" width="320" height="44" style="fill:none;stroke:#0af;stroke-width:1.5;stroke-dasharray:6 4"/>
+      <rect id="box:table:sheets:source" x="530" y="160" width="230" height="44" style="fill:none;stroke:#0af;stroke-width:1.5;stroke-dasharray:6 4"/>
+    </g>
+    <rect id="box:table:revisions:header:rev" x="820" y="100" width="90" height="40" style="fill:none;stroke:#f0a;stroke-width:1.5;stroke-dasharray:6 4"/>
+    <rect id="box:table:revisions:header:date" x="930" y="100" width="260" height="40" style="fill:none;stroke:#f0a;stroke-width:1.5;stroke-dasharray:6 4"/>
+    <rect id="box:table:revisions:header:change" x="1210" y="100" width="1100" height="40" style="fill:none;stroke:#f0a;stroke-width:1.5;stroke-dasharray:6 4"/>
+    <rect id="box:header:revisions" x="820" y="60" width="1500" height="40" style="fill:none;stroke:#f0a;stroke-width:1.5;stroke-dasharray:6 4"/>
+    <g id="table:revisions" data-pitch="56" data-font-size="26" data-columns="rev,date,change" data-limit-y="760">
+      <rect id="box:table:revisions:rev" x="820" y="160" width="90" height="44" style="fill:none;stroke:#0af;stroke-width:1.5;stroke-dasharray:6 4"/>
+      <rect id="box:table:revisions:date" x="930" y="160" width="260" height="44" style="fill:none;stroke:#0af;stroke-width:1.5;stroke-dasharray:6 4"/>
+      <rect id="box:table:revisions:change" x="1210" y="160" width="1100" height="44" style="fill:none;stroke:#0af;stroke-width:1.5;stroke-dasharray:6 4"/>
+    </g>
+    <rect id="box:header:finishes" x="80" y="792" width="700" height="40" style="fill:none;stroke:#f0a;stroke-width:1.5;stroke-dasharray:6 4"/>
+    <rect id="box:table:finishes:header:item" x="80" y="834" width="280" height="36" style="fill:none;stroke:#f0a;stroke-width:1.5;stroke-dasharray:6 4"/>
+    <rect id="box:table:finishes:header:finish" x="380" y="834" width="400" height="36" style="fill:none;stroke:#f0a;stroke-width:1.5;stroke-dasharray:6 4"/>
+    <rect id="box:table:finishes:header:location" x="800" y="834" width="320" height="36" style="fill:none;stroke:#f0a;stroke-width:1.5;stroke-dasharray:6 4"/>
+    <rect id="box:table:finishes:header:status" x="1140" y="834" width="160" height="36" style="fill:none;stroke:#f0a;stroke-width:1.5;stroke-dasharray:6 4"/>
+    <g id="table:finishes" data-pitch="60" data-font-size="24" data-columns="item,finish,location,status" data-limit-y="1340">
+      <rect id="box:table:finishes:item" x="80" y="872" width="280" height="48" style="fill:none;stroke:#0af;stroke-width:1.5;stroke-dasharray:6 4"/>
+      <rect id="box:table:finishes:finish" x="380" y="872" width="400" height="48" style="fill:none;stroke:#0af;stroke-width:1.5;stroke-dasharray:6 4"/>
+      <rect id="box:table:finishes:location" x="800" y="872" width="320" height="48" style="fill:none;stroke:#0af;stroke-width:1.5;stroke-dasharray:6 4"/>
+      <rect id="box:table:finishes:status" x="1140" y="872" width="160" height="48" style="fill:none;stroke:#0af;stroke-width:1.5;stroke-dasharray:6 4"/>
+    </g>
+    <rect id="box:header:notes" x="1360" y="792" width="960" height="40" style="fill:none;stroke:#f0a;stroke-width:1.5;stroke-dasharray:6 4"/>
+    <rect id="box:notes" x="1360" y="850" width="960" height="500" data-line-pitch="34" style="fill:none;stroke:#0af;stroke-width:1.5;stroke-dasharray:6 4"/>
+    <rect id="box:header:photos" x="80" y="1382" width="1220" height="40" style="fill:none;stroke:#f0a;stroke-width:1.5;stroke-dasharray:6 4"/>
+    <rect id="box:photo:photo-1" x="80" y="1430" width="600" height="240" style="fill:none;stroke:#0af;stroke-width:1.5;stroke-dasharray:6 4"/>
+    <rect id="box:photo:photo-2" x="700" y="1430" width="600" height="240" style="fill:none;stroke:#0af;stroke-width:1.5;stroke-dasharray:6 4"/>
+    <rect id="box:caption:photo-1" x="80" y="1680" width="600" height="36" style="fill:none;stroke:#f0a;stroke-width:1.5;stroke-dasharray:6 4"/>
+    <rect id="box:caption:photo-2" x="700" y="1680" width="600" height="36" style="fill:none;stroke:#f0a;stroke-width:1.5;stroke-dasharray:6 4"/>
+  </g>
+</svg>
